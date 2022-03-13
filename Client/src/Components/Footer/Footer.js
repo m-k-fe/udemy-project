@@ -1,10 +1,10 @@
 import React from 'react'
 import "../../css/Footer/Footer.css";
-
+import { words } from '../../static';
 function Footer() {
     return (
         <footer>
-            &copy; Copyright Mohammed Karim 2022
+            {words.footerTitle}
         </footer>
     );
 };
