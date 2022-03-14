@@ -2,7 +2,7 @@
     {
         "id" : "id1",
         "title" : "Product 1",
-        "imageUrl" : "/images/product1.jpg",
+        "imageUrl" : "/images/product1.webp",
         "desc" : "This Is Product 1",
         "price" : 30,
         "sizes" : ["s" , "m"]
@@ -10,7 +10,7 @@
     {
         "id" : "id2",
         "title" : "Product 2",
-        "imageUrl" : "/images/product2.png",
+        "imageUrl" : "/images/product2.jpg",
         "desc" : "This Is Product 2",
         "price" : 40,
         "sizes" : ["xl" , "l"]
