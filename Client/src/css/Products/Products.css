@@ -22,7 +22,30 @@
   border: 0;
   background: #2a5ea5;
   color: white;
-  padding: 10px;
+  padding: 7px;
   border-radius: 6px;
   cursor: pointer;
+}
+
+.product-info {
+  position: relative;
+}
+.product-info img {
+  display: block;
+  margin: auto;
+  height: 430px;
+}
+.product-info p {
+  color: #2a5ea5;
+  font-size: 20px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.close-icon {
+  position: absolute;
+  right: 25px;
+  top: 15px;
+  cursor: pointer;
+  font-size: 20px;
 }
