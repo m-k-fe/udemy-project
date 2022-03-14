@@ -11,7 +11,7 @@ function Products(props) {
         setProduct(false);
     };
     return (
-        <Bounce left cascade>
+        <Bounce bottom cascade>
             <div className="products-wrapper">
                 {props.products.map(item => {
                     return (
