@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ProductModal from './ProductModal';
 import "../../css/Products/Products.css";
+import Bounce  from 'react-reveal/Bounce';
 function Products(props) {
     const [product , setProduct] = useState("");
     const openModal = (product) => {
@@ -10,23 +11,25 @@ function Products(props) {
         setProduct(false);
     };
     return (
-        <div className="products-wrapper">
-            {props.products.map(item => {
-                return (
-                    <div className="product-item" key={item.id}>
-                        <a href="#" onClick={() => openModal(item)}>
-                            <img src={item.imageUrl} alt={item.title} />
-                        </a>
-                        <div className="product-desc">
-                            <p>{item.title}</p>
-                            <span>${item.price}</span>
+        <Bounce left cascade>
+            <div className="products-wrapper">
+                {props.products.map(item => {
+                    return (
+                        <div className="product-item" key={item.id}>
+                            <a href="#" onClick={() => openModal(item)}>
+                                <img src={item.imageUrl} alt={item.title} />
+                            </a>
+                            <div className="product-desc">
+                                <p>{item.title}</p>
+                                <span>${item.price}</span>
+                            </div>
+                            <button onClick={() => props.addToCart(item)}>Add To Cart</button>
                         </div>
-                        <button onClick={() => props.addToCart(item)}>Add To Cart</button>
-                    </div>
-                )
-            })}
-            <ProductModal product={product} closeModal={closeModal} />
-        </div>
+                    )
+                })}
+                <ProductModal product={product} closeModal={closeModal} />
+            </div>
+        </Bounce>
     );
 };
 export default Products;
