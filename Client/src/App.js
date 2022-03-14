@@ -1,4 +1,5 @@
 import React , { useState } from "react";
+import Filter from "./Components/Filter/Filter";
 import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
 import Products from "./Components/Products/Products";
@@ -11,7 +12,7 @@ function App() {
       <main>
         <div className="wrapper">
           <Products products={products} />
-          <div className="filter">Filter</div>
+          <Filter />
         </div>
       </main>
       <Footer />
